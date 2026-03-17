@@ -65,16 +65,15 @@
         }
 
         .spinner {
-            width: 70px;
-            height: 70px;
-            border: 5px solid var(--border-color);
-            border-top: 5px solid var(--orange-color);
-            border-right: 5px solid var(--main-color);
-            border-bottom: 5px solid var(--yellow-color);
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--orange-color);
+            border-right: 4px solid var(--main-color);
+            border-bottom: 4px solid var(--yellow-color);
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin-bottom: 3rem;
-            box-shadow: 0 0 2rem rgba(255, 115, 0, 0.4);
+            margin-bottom: 2rem;
         }
 
         @keyframes spin {
@@ -84,30 +83,13 @@
 
         .preloader-text h2 {
             color: var(--text-color);
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .preloader-text h3 {
-            color: var(--yellow-color);
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
         }
 
         .preloader-text p {
             color: var(--main-color);
-            font-size: 1.6rem;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-
-        .preloader-text span {
-            display: block;
-            margin-top: 1.5rem;
             font-size: 1.4rem;
-            color: #d1e8ff;
-            font-style: italic;
         }
 
         /* --- REUSABLE COMPONENTS --- */
@@ -177,7 +159,7 @@
             left: 0;
             width: 100%;
             padding: 2rem 9%;
-            background: rgba(7, 23, 57, 0.95);
+            background: rgba(7, 23, 57, 0.95); /* Slight transparency for modern look */
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
@@ -366,7 +348,6 @@
             flex-direction: column;
             align-items: center;
             gap: 4rem; 
-            overflow-x: hidden; /* Prevents animation from breaking mobile width */
         }
 
         .award-box {
@@ -379,6 +360,7 @@
             text-align: center;
             overflow: hidden; 
             z-index: 1;
+            /* Added hardware acceleration for smoother mobile rendering */
             transform: translateZ(0); 
         }
 
@@ -432,7 +414,7 @@
 
         .services-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 3rem;
         }
 
@@ -462,7 +444,7 @@
             overflow: hidden;
             margin-bottom: 2rem;
             border: 1px solid var(--border-color);
-            background-color: #000;
+            background-color: #000; /* Fallback color before load */
         }
 
         .service-video video, .service-video img {
@@ -921,7 +903,7 @@
             color: var(--bg-color);
         }
 
-        /* --- MASSIVELY IMPROVED MOBILE RESPONSIVENESS --- */
+        /* --- RESPONSIVE CSS & MOBILE MENU OPTIMIZATIONS --- */
         @media (max-width: 1200px) {
             html { font-size: 55%; }
         }
@@ -933,30 +915,17 @@
             .home-content { text-align: center; }
             .social-media { justify-content: center; }
             .btn-group { justify-content: center; }
+            .contact-container { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
-            /* General Mobile Scaling */
-            section { padding: 8rem 5% 2rem; }
-            :root {
-                --h1-font: 3.2rem;
-                --h2-font: 2.6rem;
-            }
-
-            /* Disable heavy background animation to save phone battery & CPU */
+            /* FIX 2: Kill the heavy background animation on mobile to save CPU/Battery */
             .grid-circles-bg {
                 animation: none !important;
                 background-attachment: scroll;
             }
+            /* End Fix 2 */
 
-            /* Fix Profile Image Overflow */
-            .home-img {
-                width: 250px;
-                height: 250px;
-                margin: 0 auto;
-            }
-
-            /* Hamburger Menu Fixes */
             #menu-icon { display: block; } 
             .navbar { 
                 position: absolute; 
@@ -977,25 +946,12 @@
                 margin: 3rem 0; 
                 text-align: center; 
             }
-
-            /* Fix Education Timeline for Mobile (Align everything to the right of the line) */
-            .timeline::after { left: 20px; }
-            .timeline-container { width: 100%; padding-left: 50px; padding-right: 0; }
-            .timeline-container::after { left: 10px; }
-            .left, .right { left: 0%; }
-
-            /* Fix Grids to stack neatly into 1 column */
-            .services-container, .contact-container { 
-                grid-template-columns: 1fr; 
-            }
-            .contact-form .input-box { 
-                grid-template-columns: 1fr; 
-            }
-            
-            /* Fix Award Box glowing border overflow */
-            .award-box { 
-                width: 95%; 
-            } 
+            .timeline::after { left: 31px; }
+            .timeline-container { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .timeline-container::after { left: 21px; }
+            .right { left: 0%; }
+            .contact-form .input-box { grid-template-columns: 1fr; }
+            .award-box { width: 100%; } 
         }
     </style>
 </head>
@@ -1005,9 +961,7 @@
         <div class="spinner"></div>
         <div class="preloader-text">
             <h2>Chennakesavarao Kancharla</h2>
-            <h3>Web Developer & Data Scientist</h3>
-            <p>Welcome to my portfolio! Please wait a moment while I prepare high-quality interactive project demonstrations and media assets.</p>
-            <span>It will be worth the wait...</span>
+            <p>Loading interactive assets...</p>
         </div>
     </div>
 
@@ -1110,30 +1064,13 @@
             <script>
                 const servicesContainer = document.querySelector('.services-container');
                 for (let i = 1; i <= 13; i++) {
-                    let videoHTML = '';
-                    
-                    if (i <= 9) {
-                        // First 9 Videos: AUTO-LOOP (No controls shown, plays automatically)
-                        videoHTML = `
-                            <video autoplay loop muted playsinline>
-                                <source src="videos/sample-video-${i}.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        `;
-                    } else {
-                        // Remaining Videos (10-13): CLICK-TO-PLAY (Saves data, shows play button)
-                        videoHTML = `
+                    servicesContainer.innerHTML += `
+                    <div class="service-box">
+                        <div class="service-video">
                             <video loop muted playsinline preload="none" controls>
                                 <source src="videos/sample-video-${i}.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                        `;
-                    }
-
-                    servicesContainer.innerHTML += `
-                    <div class="service-box">
-                        <div class="service-video">
-                            ${videoHTML}
                         </div>
                         <h3>Web Portfolio Sample ${i}</h3>
                         <p>A detailed demonstration of custom front-end UI/UX design, mobile responsiveness, and clean backend integration developed according to exact client specifications.</p>
@@ -1314,7 +1251,7 @@
                     <span>Hyderabad, Telangana, India</span>
                 </div>
 
-                <div class="map-container">
+                <div class="map-container" id="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12182.30520634488!2d78.40804555!3d17.385044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1710600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -1351,15 +1288,16 @@
     </footer>
 
     <script>
-        // --- PRELOADER LOGIC (Exactly 5 Seconds) ---
-        window.addEventListener('load', () => {
+        // --- FIX 1: OPTIMIZED PRELOADER LOGIC ---
+        // Instead of waiting for every single megabyte of images to download, 
+        // this removes the preloader as soon as the HTML is drawn (max 1.5 seconds)
+        document.addEventListener('DOMContentLoaded', () => {
             const preloader = document.getElementById('preloader');
-            
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
-                document.body.classList.remove('no-scroll'); 
-            }, 5000); // 5000 milliseconds = 5 seconds
+                document.body.classList.remove('no-scroll');
+            }, 1500); // Only a 1.5 second wait for the user now!
         });
 
         // --- MENU LOGIC ---
