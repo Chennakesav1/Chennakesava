@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,14 @@
     <style>
         /* --- NEW COLOR THEME: Blue, Skyblue, Orange, Yellow --- */
         :root {
-            --bg-color: #071739;         
-            --second-bg-color: #0a2254;  
-            --main-color: #00bfff;       
-            --orange-color: #ff7300;     
-            --yellow-color: #ffcc00;     
-            --border-color: #1e3a8a;     
-            --text-color: #f0f4f8;       
-            
+            --bg-color: #071739;
+            --second-bg-color: #0a2254;
+            --main-color: #00bfff;
+            --orange-color: #ff7300;
+            --yellow-color: #ffcc00;
+            --border-color: #1e3a8a;
+            --text-color: #f0f4f8;
+
             --h1-font: 4rem;
             --h2-font: 3rem;
             --p-font: 1.2rem;
@@ -33,7 +34,7 @@
         }
 
         html {
-            font-size: 62.5%; 
+            font-size: 62.5%;
             overflow-x: hidden;
         }
 
@@ -44,7 +45,7 @@
 
         /* --- PRELOADER (LOADING SCREEN) --- */
         body.no-scroll {
-            overflow: hidden; 
+            overflow: hidden;
         }
 
         #preloader {
@@ -77,8 +78,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .preloader-text h2 {
@@ -170,7 +176,7 @@
             left: 0;
             width: 0%;
             height: 100%;
-            background: var(--yellow-color); 
+            background: var(--yellow-color);
             z-index: -1;
             transition: .5s ease;
         }
@@ -208,7 +214,7 @@
         }
 
         .logo span {
-            color: var(--main-color); 
+            color: var(--main-color);
         }
 
         .navbar a {
@@ -221,7 +227,7 @@
 
         .navbar a:hover,
         .navbar a.active {
-            color: var(--yellow-color); 
+            color: var(--yellow-color);
         }
 
         #menu-icon {
@@ -253,8 +259,13 @@
         }
 
         @keyframes rotateBg {
-            0% { transform: rotate(0deg) scale(1.5); }
-            100% { transform: rotate(360deg) scale(1.5); }
+            0% {
+                transform: rotate(0deg) scale(1.5);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1.5);
+            }
         }
 
         .home-content {
@@ -284,7 +295,7 @@
             height: 350px;
             border-radius: 50%;
             overflow: hidden;
-            border: .5rem solid var(--main-color); 
+            border: .5rem solid var(--main-color);
             box-shadow: 0 0 2.5rem var(--main-color);
             transition: .5s ease;
         }
@@ -315,7 +326,7 @@
             width: 4.5rem;
             height: 4.5rem;
             background: transparent;
-            border: .2rem solid var(--main-color); 
+            border: .2rem solid var(--main-color);
             border-radius: 50%;
             font-size: 2.2rem;
             color: var(--main-color);
@@ -369,9 +380,9 @@
         .typing-text {
             font-size: 1.8rem;
             line-height: 1.8;
-            min-height: 18rem; 
+            min-height: 18rem;
             text-align: justify;
-            border-left: 3px solid var(--orange-color); 
+            border-left: 3px solid var(--orange-color);
             padding-left: 2rem;
         }
 
@@ -380,7 +391,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 4rem; 
+            gap: 4rem;
         }
 
         .award-box {
@@ -391,9 +402,9 @@
             padding: 3rem;
             border-radius: 1.5rem;
             text-align: center;
-            overflow: hidden; 
+            overflow: hidden;
             z-index: 1;
-            transform: translateZ(0); 
+            transform: translateZ(0);
         }
 
         .award-box::before {
@@ -411,27 +422,32 @@
         .award-box::after {
             content: '';
             position: absolute;
-            inset: 3px; 
-            background: var(--bg-color); 
+            inset: 3px;
+            background: var(--bg-color);
             border-radius: 1.2rem;
             z-index: -1;
         }
 
         @keyframes rotate-light {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .award-box i {
             font-size: 4rem;
-            color: var(--yellow-color); 
+            color: var(--yellow-color);
             margin-bottom: 1.5rem;
         }
 
         .award-box h3 {
             font-size: 2.2rem;
             margin-bottom: 1rem;
-            color: var(--main-color); 
+            color: var(--main-color);
         }
 
         .award-box p {
@@ -480,16 +496,17 @@
             background-color: #000;
         }
 
-        .service-video video, .service-video img {
+        .service-video video,
+        .service-video img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block; 
+            display: block;
         }
 
         .service-box h3 {
             font-size: 2.2rem;
-            color: var(--yellow-color); 
+            color: var(--yellow-color);
             margin-bottom: 1rem;
         }
 
@@ -534,7 +551,7 @@
         .service-contact-btn {
             display: inline-block;
             padding: 1rem 2rem;
-            background: var(--orange-color); 
+            background: var(--orange-color);
             color: #fff;
             border-radius: .8rem;
             font-size: 1.4rem;
@@ -548,7 +565,7 @@
         }
 
         .service-contact-btn:hover {
-            background: var(--yellow-color); 
+            background: var(--yellow-color);
             color: var(--bg-color);
             box-shadow: 0 0 1.5rem var(--yellow-color);
             transform: translateY(-2px);
@@ -595,10 +612,17 @@
             z-index: 1;
         }
 
-        .left { left: 0; }
-        .right { left: 50%; }
+        .left {
+            left: 0;
+        }
 
-        .right::after { left: -10px; }
+        .right {
+            left: 50%;
+        }
+
+        .right::after {
+            left: -10px;
+        }
 
         .timeline-content {
             padding: 2.5rem;
@@ -617,12 +641,12 @@
 
         .timeline-content h3 {
             font-size: 1.8rem;
-            color: var(--yellow-color); 
+            color: var(--yellow-color);
         }
 
         .timeline-content h4 {
             font-size: 1.8rem;
-            color: var(--main-color); 
+            color: var(--main-color);
             margin: 1rem 0;
         }
 
@@ -637,7 +661,8 @@
 
         .certifications-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
+            /* This forces exactly 3 in a row */
             gap: 3rem;
         }
 
@@ -650,7 +675,7 @@
         }
 
         .cert-card:hover {
-            border-color: var(--orange-color); 
+            border-color: var(--orange-color);
             box-shadow: 0 0 2rem var(--orange-color);
             transform: translateY(-8px);
         }
@@ -741,7 +766,7 @@
         .exp-date span {
             font-size: 1.5rem;
             color: var(--bg-color);
-            background: var(--yellow-color); 
+            background: var(--yellow-color);
             padding: .5rem 1.5rem;
             border-radius: 2rem;
             font-weight: 600;
@@ -749,9 +774,9 @@
 
         .exp-box ul {
             font-size: 1.6rem;
-            list-style: none; 
+            list-style: none;
         }
-        
+
         .exp-box ul li {
             margin-bottom: 1rem;
             position: relative;
@@ -759,7 +784,7 @@
         }
 
         .exp-box ul li::before {
-            content: '\f0da'; 
+            content: '\f0da';
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             position: absolute;
@@ -771,6 +796,7 @@
         #contact {
             background: var(--bg-color);
         }
+
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
@@ -810,7 +836,7 @@
         .info-item i {
             font-size: 2.5rem;
             color: var(--bg-color);
-            background: var(--main-color); 
+            background: var(--main-color);
             width: 5rem;
             height: 5rem;
             display: flex;
@@ -824,7 +850,7 @@
             height: 250px;
             border-radius: 1.5rem;
             overflow: hidden;
-            border: 2px solid var(--orange-color); 
+            border: 2px solid var(--orange-color);
             margin-top: 2rem;
             box-shadow: 0 0 1.5rem rgba(255, 115, 0, 0.3);
         }
@@ -921,7 +947,7 @@
             justify-content: center;
             align-items: center;
             padding: 1rem;
-            background: var(--orange-color); 
+            background: var(--orange-color);
             border-radius: 1rem;
             transition: .5s ease;
         }
@@ -939,22 +965,50 @@
 
         /* --- RESPONSIVE CSS & MOBILE MENU OPTIMIZATIONS --- */
         @media (max-width: 1200px) {
-            html { font-size: 55%; }
+            html {
+                font-size: 55%;
+            }
         }
 
         @media (max-width: 991px) {
-            header { padding: 2rem 3%; }
-            section { padding: 10rem 3% 2rem; }
-            #home { flex-direction: column-reverse; justify-content: center; gap: 5rem; }
-            .home-content { text-align: center; }
-            .social-media { justify-content: center; }
-            .btn-group { justify-content: center; }
-            .contact-container { grid-template-columns: 1fr; }
+            header {
+                padding: 2rem 3%;
+            }
+
+            section {
+                padding: 10rem 3% 2rem;
+            }
+
+            #home {
+                flex-direction: column-reverse;
+                justify-content: center;
+                gap: 5rem;
+            }
+
+            .home-content {
+                text-align: center;
+            }
+
+            .social-media {
+                justify-content: center;
+            }
+
+            .btn-group {
+                justify-content: center;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
+
             /* General Mobile Padding & Fonts */
-            section { padding: 8rem 5% 2rem; }
+            section {
+                padding: 8rem 5% 2rem;
+            }
+
             :root {
                 --h1-font: 3.2rem;
                 --h2-font: 2.6rem;
@@ -969,6 +1023,7 @@
                 flex-direction: column;
                 width: 100%;
             }
+
             .btn {
                 width: 100%;
             }
@@ -980,57 +1035,103 @@
             }
 
             /* Hamburger Menu */
-            #menu-icon { display: block; } 
-            .navbar { 
-                position: absolute; 
-                top: 100%; 
-                left: 0; 
-                width: 100%; 
-                padding: 1rem 3%; 
-                background: var(--bg-color); 
-                border-top: 1px solid var(--border-color); 
-                border-bottom: 1px solid var(--border-color);
-                display: none; 
-                box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+            #menu-icon {
+                display: block;
             }
-            .navbar.active { display: block; } 
-            .navbar a { display: block; font-size: 2rem; margin: 3rem 0; text-align: center; }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                padding: 1rem 3%;
+                background: var(--bg-color);
+                border-top: 1px solid var(--border-color);
+                border-bottom: 1px solid var(--border-color);
+                display: none;
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+            }
+
+            .navbar.active {
+                display: block;
+            }
+
+            .navbar a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+                text-align: center;
+            }
 
             .exp-header {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 1.5rem; 
+                gap: 1.5rem;
             }
+
             .exp-title h3 {
                 font-size: 2rem;
             }
+
             .exp-date {
-                align-self: flex-start; 
+                align-self: flex-start;
             }
 
-            .services-container { grid-template-columns: 1fr; gap: 2rem; }
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
             .service-box {
-                padding: 1.5rem; 
+                padding: 1.5rem;
                 width: 100%;
             }
+
             .service-video {
-                height: auto; 
-                aspect-ratio: 16/9; 
+                height: auto;
+                aspect-ratio: 16/9;
                 width: 100%;
                 margin: 0 auto 2rem auto;
             }
 
             /* Timeline Fixes */
-            .timeline::after { left: 20px; }
-            .timeline-container { width: 100%; padding-left: 50px; padding-right: 0; }
-            .timeline-container::after { left: 10px; }
-            .left, .right { left: 0%; }
+            .timeline::after {
+                left: 20px;
+            }
 
-            .contact-form .input-box { grid-template-columns: 1fr; }
-            .award-box { width: 95%; } 
+            .timeline-container {
+                width: 100%;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+
+            .timeline-container::after {
+                left: 10px;
+            }
+
+            .left,
+            .right {
+                left: 0%;
+            }
+
+            .contact-form .input-box {
+                grid-template-columns: 1fr;
+            }
+
+            .award-box {
+                width: 95%;
+            }
+
+            .certifications-container {
+                grid-template-columns: 1fr;
+            }
+
+            /* Add this line! */
         }
     </style>
+
 </head>
+
 <body class="no-scroll">
 
     <div id="preloader">
@@ -1038,7 +1139,7 @@
         <div class="preloader-text">
             <h2>Chennakesavarao Kancharla</h2>
             <h3>Web Developer & Data Scientist</h3>
-            
+
             <div class="loading-stats">
                 <p><i class="fas fa-check-circle"></i> B.Tech ECE (8.6 GPA)</p>
                 <p><i class="fas fa-laptop-code"></i> 15+ Custom Web Projects</p>
@@ -1070,17 +1171,23 @@
             <h3>Hello, It's Me</h3>
             <h1>Chennakesavarao Kancharla</h1>
             <h3>And I'm a <span class="main-color">Web Developer & Data Scientist</span></h3>
-            <p>Passionate Electronics and Communication Engineering graduate specializing in full-stack development and machine learning, bridging the gap between hardware architecture and powerful software solutions.</p>
+            <p>Passionate Electronics and Communication Engineering graduate specializing in full-stack development and
+                machine learning, bridging the gap between hardware architecture and powerful software solutions.</p>
 
             <div class="social-media">
-                <a href="https://github.com/Chennakesav1" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/chennakesavarao-kancharla-634911373" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.instagram.com/____chennakesava____" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Chennakesav1" target="_blank" title="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/chennakesavarao-kancharla-634911373" target="_blank"
+                    title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/____chennakesava____" target="_blank" title="Instagram"><i
+                        class="fab fa-instagram"></i></a>
             </div>
 
             <div class="btn-group">
-                <a href="https://wa.me/917989004552?text=Hello%20Chennakesavarao,%20I%20am%20interested%20in%20hiring%20you." target="_blank" class="btn">Hire Me</a>
-                <a href="images/CHENNAKESAVARAO KANCHARLA-RESUME.pdf" download="images/CHENNAKESAVARAO KANCHARLA-RESUME.pdf" class="btn">Download Resume</a>
+                <a href="https://wa.me/917989004552?text=Hello%20Chennakesavarao,%20I%20am%20interested%20in%20hiring%20you."
+                    target="_blank" class="btn">Hire Me</a>
+                <a href="images/CHENNAKESAVARAO KANCHARLA-RESUME.pdf"
+                    download="images/CHENNAKESAVARAO KANCHARLA-RESUME.pdf" class="btn">Download Resume</a>
             </div>
         </div>
 
@@ -1118,31 +1225,39 @@
     <section id="services">
         <h2 class="heading">My <span>Services & Projects</span></h2>
         <div class="services-container">
-            
+
             <div class="service-box">
                 <div class="service-video">
-                    <img src="images/WhatsApp Image 2026-03-16 at 10.54.46 AM.jpeg" alt="Data Analysis" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    <img src="images/WhatsApp Image 2026-03-16 at 10.54.46 AM.jpeg" alt="Data Analysis"
+                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
                 </div>
                 <h3>Advanced Data Analysis</h3>
-                <p>Comprehensive data analysis utilizing Machine Learning, Deep Learning, Statistics, and Power BI. I transform raw data into actionable, visual insights for your business.</p>
+                <p>Comprehensive data analysis utilizing Machine Learning, Deep Learning, Statistics, and Power BI. I
+                    transform raw data into actionable, visual insights for your business.</p>
                 <div class="service-social">
                     <a href="https://github.com/Chennakesav1" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/chennakesavarao-kancharla-634911373" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/chennakesavarao-kancharla-634911373" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
                 </div>
-                <a href="https://wa.me/917989004552?text=Hi%20Chennakesavarao,%20I%20am%20interested%20in%20your%20Data%20Analysis%20services." target="_blank" class="service-contact-btn"><i class="fab fa-whatsapp"></i> Contact for AI</a>
+                <a href="https://wa.me/917989004552?text=Hi%20Chennakesavarao,%20I%20am%20interested%20in%20your%20Data%20Analysis%20services."
+                    target="_blank" class="service-contact-btn"><i class="fab fa-whatsapp"></i> Contact for AI</a>
             </div>
 
             <div class="service-box">
                 <div class="service-video">
-                    <img src="images/WhatsApp Image 2026-03-16 at 11.05.32 AM.jpeg" alt="Web Development" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    <img src="images/WhatsApp Image 2026-03-16 at 11.05.32 AM.jpeg" alt="Web Development"
+                        style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
                 </div>
                 <h3>Custom Web Dev & Hosting</h3>
-                <p>I develop and host websites strictly according to customer requirements. Offering highly secure customization, responsive designs, and guaranteed 5 years of dedicated support.</p>
+                <p>I develop and host websites strictly according to customer requirements. Offering highly secure
+                    customization, responsive designs, and guaranteed 5 years of dedicated support.</p>
                 <div class="service-social">
                     <a href="https://github.com/Chennakesav1" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/chennakesavarao-kancharla-634911373" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/chennakesavarao-kancharla-634911373" target="_blank"><i
+                            class="fab fa-linkedin-in"></i></a>
                 </div>
-                <a href="https://wa.me/917989004552?text=Hi%20Chennakesavarao,%20I%20am%20interested%20in%20your%20Web%20Development%20services." target="_blank" class="service-contact-btn"><i class="fab fa-whatsapp"></i> Contact for Web</a>
+                <a href="https://wa.me/917989004552?text=Hi%20Chennakesavarao,%20I%20am%20interested%20in%20your%20Web%20Development%20services."
+                    target="_blank" class="service-contact-btn"><i class="fab fa-whatsapp"></i> Contact for Web</a>
             </div>
 
             <script>
@@ -1240,7 +1355,7 @@
                     <p>Principles of connected devices and architecture.</p>
                 </div>
             </div>
-             <div class="cert-card">
+            <div class="cert-card">
                 <div class="cert-img-container">
                     <img src="images/UI-UX-CERTIFICATE.jpg" alt="UI/UX Certification" loading="lazy">
                 </div>
@@ -1250,7 +1365,7 @@
                     <p>Principles of user interface and experience.</p>
                 </div>
             </div>
-             <div class="cert-card">
+            <div class="cert-card">
                 <div class="cert-img-container">
                     <img src="images/digital.jpeg" alt="Data Scientist Certification" loading="lazy">
                 </div>
@@ -1272,7 +1387,7 @@
                         <h3>Graduate Engineer Trainee</h3>
                         <h4>Precifast Pvt Ltd</h4>
                     </div>
-                    <div class="exp-date"><span>Recently Joined (2024)</span></div>
+                    <div class="exp-date"><span>Recently Joined (2026)</span></div>
                 </div>
                 <ul>
                     <li>Undergoing training in engineering operations and advanced technical systems.</li>
@@ -1314,7 +1429,8 @@
         <div class="contact-container">
             <div class="contact-info">
                 <h3>Let's Connect</h3>
-                <p>Have a question or want to work together? Feel free to reach out via phone, email, or connect on social media.</p>
+                <p>Have a question or want to work together? Feel free to reach out via phone, email, or connect on
+                    social media.</p>
                 <div class="info-item">
                     <i class="fas fa-phone-alt"></i>
                     <a href="tel:917989004552">+91 7989004552</a>
@@ -1333,7 +1449,9 @@
                 </div>
 
                 <div class="map-container" id="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12182.30520634488!2d78.40804555!3d17.385044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1710600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12182.30520634488!2d78.40804555!3d17.385044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1710600000000!5m2!1sen!2sin"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
@@ -1358,8 +1476,10 @@
 
         <div class="footer-social">
             <a href="https://github.com/Chennakesav1" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/chennakesavarao-kancharla-634911373" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/____chennakesava____" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/chennakesavarao-kancharla-634911373" target="_blank"><i
+                    class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/____chennakesava____" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
         </div>
 
         <div class="footer-iconTop">
@@ -1397,7 +1517,7 @@
             if (index < aboutText.length) {
                 typingElement.innerHTML += aboutText.charAt(index);
                 index++;
-                setTimeout(type, 20); 
+                setTimeout(type, 20);
             }
         }
 
@@ -1422,7 +1542,7 @@
                 let height = sec.offsetHeight;
                 let id = sec.getAttribute('id');
 
-                if(top >= offset && top < offset + height) {
+                if (top >= offset && top < offset + height) {
                     navLinks.forEach(links => {
                         links.classList.remove('active');
                         document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -1439,4 +1559,5 @@
         });
     </script>
 </body>
+
 </html>
