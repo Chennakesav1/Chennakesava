@@ -8,13 +8,13 @@
     <style>
         /* --- NEW COLOR THEME: Blue, Skyblue, Orange, Yellow --- */
         :root {
-            --bg-color: #071739;         /* Deep Navy Blue */
-            --second-bg-color: #0a2254;  /* Lighter Royal Blue */
-            --main-color: #00bfff;       /* Deep Sky Blue */
-            --orange-color: #ff7300;     /* Vibrant Orange */
-            --yellow-color: #ffcc00;     /* Bright Yellow */
-            --border-color: #1e3a8a;     /* Muted Blue Border */
-            --text-color: #f0f4f8;       /* Crisp White/Blue tint text */
+            --bg-color: #071739;         
+            --second-bg-color: #0a2254;  
+            --main-color: #00bfff;       
+            --orange-color: #ff7300;     
+            --yellow-color: #ffcc00;     
+            --border-color: #1e3a8a;     
+            --text-color: #f0f4f8;       
             
             --h1-font: 4rem;
             --h2-font: 3rem;
@@ -44,7 +44,7 @@
 
         /* --- PRELOADER (LOADING SCREEN) --- */
         body.no-scroll {
-            overflow: hidden; /* Prevents scrolling while loading */
+            overflow: hidden; 
         }
 
         #preloader {
@@ -61,20 +61,19 @@
             align-items: center;
             text-align: center;
             padding: 0 2rem;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
         }
 
         .spinner {
-            width: 70px;
-            height: 70px;
-            border: 5px solid var(--border-color);
-            border-top: 5px solid var(--orange-color);
-            border-right: 5px solid var(--main-color);
-            border-bottom: 5px solid var(--yellow-color);
+            width: 60px;
+            height: 60px;
+            border: 4px solid var(--border-color);
+            border-top: 4px solid var(--orange-color);
+            border-right: 4px solid var(--main-color);
+            border-bottom: 4px solid var(--yellow-color);
             border-radius: 50%;
             animation: spin 1s linear infinite;
-            margin-bottom: 3rem;
-            box-shadow: 0 0 2rem rgba(255, 115, 0, 0.4);
+            margin-bottom: 2rem;
         }
 
         @keyframes spin {
@@ -84,30 +83,13 @@
 
         .preloader-text h2 {
             color: var(--text-color);
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .preloader-text h3 {
-            color: var(--yellow-color);
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
         }
 
         .preloader-text p {
             color: var(--main-color);
-            font-size: 1.6rem;
-            max-width: 600px;
-            line-height: 1.6;
-        }
-
-        .preloader-text span {
-            display: block;
-            margin-top: 1.5rem;
             font-size: 1.4rem;
-            color: #d1e8ff;
-            font-style: italic;
         }
 
         /* --- REUSABLE COMPONENTS --- */
@@ -122,7 +104,6 @@
             margin-bottom: 5rem;
         }
 
-        /* Yellow for heading spans */
         .heading span {
             color: var(--yellow-color);
         }
@@ -131,7 +112,6 @@
             color: var(--main-color);
         }
 
-        /* Orange Buttons */
         .btn {
             position: relative;
             display: inline-flex;
@@ -157,7 +137,7 @@
             left: 0;
             width: 0%;
             height: 100%;
-            background: var(--yellow-color); /* Fills with Yellow on hover */
+            background: var(--yellow-color); 
             z-index: -1;
             transition: .5s ease;
         }
@@ -179,7 +159,8 @@
             left: 0;
             width: 100%;
             padding: 2rem 9%;
-            background: var(--bg-color);
+            background: rgba(7, 23, 57, 0.95); /* Slight transparency for modern look */
+            backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -194,7 +175,7 @@
         }
 
         .logo span {
-            color: var(--main-color); /* Skyblue logo dot */
+            color: var(--main-color); 
         }
 
         .navbar a {
@@ -207,7 +188,7 @@
 
         .navbar a:hover,
         .navbar a.active {
-            color: var(--yellow-color); /* Nav highlights yellow */
+            color: var(--yellow-color); 
         }
 
         #menu-icon {
@@ -270,7 +251,7 @@
             height: 350px;
             border-radius: 50%;
             overflow: hidden;
-            border: .5rem solid var(--main-color); /* Skyblue border */
+            border: .5rem solid var(--main-color); 
             box-shadow: 0 0 2.5rem var(--main-color);
             transition: .5s ease;
         }
@@ -301,7 +282,7 @@
             width: 4.5rem;
             height: 4.5rem;
             background: transparent;
-            border: .2rem solid var(--main-color); /* Skyblue */
+            border: .2rem solid var(--main-color); 
             border-radius: 50%;
             font-size: 2.2rem;
             color: var(--main-color);
@@ -357,7 +338,7 @@
             line-height: 1.8;
             min-height: 18rem; 
             text-align: justify;
-            border-left: 3px solid var(--orange-color); /* Orange line */
+            border-left: 3px solid var(--orange-color); 
             padding-left: 2rem;
         }
 
@@ -379,9 +360,10 @@
             text-align: center;
             overflow: hidden; 
             z-index: 1;
+            /* Added hardware acceleration for smoother mobile rendering */
+            transform: translateZ(0); 
         }
 
-        /* Glowing Orange Light Border */
         .award-box::before {
             content: '';
             position: absolute;
@@ -410,14 +392,14 @@
 
         .award-box i {
             font-size: 4rem;
-            color: var(--yellow-color); /* Yellow Icons */
+            color: var(--yellow-color); 
             margin-bottom: 1.5rem;
         }
 
         .award-box h3 {
             font-size: 2.2rem;
             margin-bottom: 1rem;
-            color: var(--main-color); /* Skyblue Titles */
+            color: var(--main-color); 
         }
 
         .award-box p {
@@ -462,6 +444,7 @@
             overflow: hidden;
             margin-bottom: 2rem;
             border: 1px solid var(--border-color);
+            background-color: #000; /* Fallback color before load */
         }
 
         .service-video video, .service-video img {
@@ -472,7 +455,7 @@
 
         .service-box h3 {
             font-size: 2.2rem;
-            color: var(--yellow-color); /* Yellow Titles */
+            color: var(--yellow-color); 
             margin-bottom: 1rem;
         }
 
@@ -517,7 +500,7 @@
         .service-contact-btn {
             display: inline-block;
             padding: 1rem 2rem;
-            background: var(--orange-color); /* Orange Button */
+            background: var(--orange-color); 
             color: #fff;
             border-radius: .8rem;
             font-size: 1.4rem;
@@ -531,7 +514,7 @@
         }
 
         .service-contact-btn:hover {
-            background: var(--yellow-color); /* Hover to Yellow */
+            background: var(--yellow-color); 
             color: var(--bg-color);
             box-shadow: 0 0 1.5rem var(--yellow-color);
             transform: translateY(-2px);
@@ -548,7 +531,6 @@
             margin: 0 auto;
         }
 
-        /* Skyblue line */
         .timeline::after {
             content: '';
             position: absolute;
@@ -566,7 +548,6 @@
             width: 50%;
         }
 
-        /* Orange Dots */
         .timeline-container::after {
             content: '';
             position: absolute;
@@ -602,12 +583,12 @@
 
         .timeline-content h3 {
             font-size: 1.8rem;
-            color: var(--yellow-color); /* Yellow Date */
+            color: var(--yellow-color); 
         }
 
         .timeline-content h4 {
             font-size: 1.8rem;
-            color: var(--main-color); /* Skyblue Title */
+            color: var(--main-color); 
             margin: 1rem 0;
         }
 
@@ -635,7 +616,7 @@
         }
 
         .cert-card:hover {
-            border-color: var(--orange-color); /* Orange Border Hover */
+            border-color: var(--orange-color); 
             box-shadow: 0 0 2rem var(--orange-color);
             transform: translateY(-8px);
         }
@@ -723,7 +704,6 @@
             font-size: 1.8rem;
         }
 
-        /* Yellow Badge for Dates */
         .exp-date span {
             font-size: 1.5rem;
             color: var(--bg-color);
@@ -744,7 +724,6 @@
             padding-left: 2rem;
         }
 
-        /* Orange bullet icons */
         .exp-box ul li::before {
             content: '\f0da'; 
             font-family: 'Font Awesome 5 Free';
@@ -797,7 +776,7 @@
         .info-item i {
             font-size: 2.5rem;
             color: var(--bg-color);
-            background: var(--main-color); /* Skyblue circles */
+            background: var(--main-color); 
             width: 5rem;
             height: 5rem;
             display: flex;
@@ -811,7 +790,7 @@
             height: 250px;
             border-radius: 1.5rem;
             overflow: hidden;
-            border: 2px solid var(--orange-color); /* Orange Border */
+            border: 2px solid var(--orange-color); 
             margin-top: 2rem;
             box-shadow: 0 0 1.5rem rgba(255, 115, 0, 0.3);
         }
@@ -908,7 +887,7 @@
             justify-content: center;
             align-items: center;
             padding: 1rem;
-            background: var(--orange-color); /* Orange up/down arrows */
+            background: var(--orange-color); 
             border-radius: 1rem;
             transition: .5s ease;
         }
@@ -924,7 +903,7 @@
             color: var(--bg-color);
         }
 
-        /* --- RESPONSIVE CSS & MOBILE MENU --- */
+        /* --- RESPONSIVE CSS & MOBILE MENU OPTIMIZATIONS --- */
         @media (max-width: 1200px) {
             html { font-size: 55%; }
         }
@@ -940,6 +919,13 @@
         }
 
         @media (max-width: 768px) {
+            /* FIX 2: Kill the heavy background animation on mobile to save CPU/Battery */
+            .grid-circles-bg {
+                animation: none !important;
+                background-attachment: scroll;
+            }
+            /* End Fix 2 */
+
             #menu-icon { display: block; } 
             .navbar { 
                 position: absolute; 
@@ -975,9 +961,7 @@
         <div class="spinner"></div>
         <div class="preloader-text">
             <h2>Chennakesavarao Kancharla</h2>
-            <h3>Web Developer & Data Scientist</h3>
-            <p>Welcome to my portfolio! Please wait a moment while I prepare high-quality interactive project demonstrations and media assets.</p>
-            <span>It will be worth the wait...</span>
+            <p>Loading interactive assets...</p>
         </div>
     </div>
 
@@ -1017,7 +1001,7 @@
         </div>
 
         <div class="home-img">
-            <img src="./images/profile.jpg" alt="Chennakesavarao Kancharla Profile">
+            <img src="./images/profile.jpg" alt="Chennakesavarao Kancharla Profile" loading="lazy">
         </div>
     </section>
 
@@ -1032,7 +1016,7 @@
             <div class="award-box">
                 <i class="fas fa-graduation-cap"></i>
                 <h3>High Academic GPA</h3>
-                <p>Consistent high performance: 8.6 GPA (B.Tech ECE), 9.28/10 (MPC), 8.7/10 (SSC)</p>
+                <p>Consistent high performance: 8.6 GPA (B.Tech ECE), 9.8/10 (MPC), 9.7/10 (SSC)</p>
             </div>
             <div class="award-box">
                 <i class="fas fa-microchip"></i>
@@ -1053,7 +1037,7 @@
             
             <div class="service-box">
                 <div class="service-video">
-                    <img src="images/WhatsApp Image 2026-03-16 at 10.54.46 AM.jpeg" alt="Data Analysis" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="images/WhatsApp Image 2026-03-16 at 10.54.46 AM.jpeg" alt="Data Analysis" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
                 </div>
                 <h3>Advanced Data Analysis</h3>
                 <p>Comprehensive data analysis utilizing Machine Learning, Deep Learning, Statistics, and Power BI. I transform raw data into actionable, visual insights for your business.</p>
@@ -1066,7 +1050,7 @@
 
             <div class="service-box">
                 <div class="service-video">
-                    <img src="images/WhatsApp Image 2026-03-16 at 11.05.32 AM.jpeg" type="video/mp4"  alt="Web Development" style="width: 100%; height: 100%; object-fit: cover;">
+                    <img src="images/WhatsApp Image 2026-03-16 at 11.05.32 AM.jpeg" alt="Web Development" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
                 </div>
                 <h3>Custom Web Dev & Hosting</h3>
                 <p>I develop and host websites strictly according to customer requirements. Offering highly secure customization, responsive designs, and guaranteed 5 years of dedicated support.</p>
@@ -1083,7 +1067,7 @@
                     servicesContainer.innerHTML += `
                     <div class="service-box">
                         <div class="service-video">
-                            <video autoplay loop muted playsinline>
+                            <video loop muted playsinline preload="none" controls>
                                 <source src="videos/sample-video-${i}.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
@@ -1116,7 +1100,7 @@
                 <div class="timeline-content">
                     <h3>2019 - 2021</h3>
                     <h4>Intermediate (MPC) (928 marks)</h4>
-                    <p>Vidhya Bharati Junior College, Sathupally, Telangana</p>
+                    <p>Mother Teresa Junior College, Sathupally, Telangana</p>
                 </div>
             </div>
             <div class="timeline-container right">
@@ -1134,7 +1118,7 @@
         <div class="certifications-container">
             <div class="cert-card">
                 <div class="cert-img-container">
-                    <img src="images/PYTHON-CERTIFICATION.jpg" alt="Basic Python Certification">
+                    <img src="images/PYTHON-CERTIFICATION.jpg" alt="Basic Python Certification" loading="lazy">
                 </div>
                 <div class="cert-details">
                     <h3>Basic Python</h3>
@@ -1144,7 +1128,7 @@
             </div>
             <div class="cert-card">
                 <div class="cert-img-container">
-                    <img src="images/C-CERTIFICATE.jpg" alt="C Language Certification">
+                    <img src="images/C-CERTIFICATE.jpg" alt="C Language Certification" loading="lazy">
                 </div>
                 <div class="cert-details">
                     <h3>C Language</h3>
@@ -1154,7 +1138,7 @@
             </div>
             <div class="cert-card">
                 <div class="cert-img-container">
-                    <img src="images/HTML-CERTIFICATION.jpg" alt="HTML Certification">
+                    <img src="images/HTML-CERTIFICATION.jpg" alt="HTML Certification" loading="lazy">
                 </div>
                 <div class="cert-details">
                     <h3>HTML</h3>
@@ -1164,7 +1148,7 @@
             </div>
             <div class="cert-card">
                 <div class="cert-img-container">
-                    <img src="images/IOT-CERTIFICATE.jpg" alt="IoT Certification">
+                    <img src="images/IOT-CERTIFICATE.jpg" alt="IoT Certification" loading="lazy">
                 </div>
                 <div class="cert-details">
                     <h3>Internet of Things (IoT)</h3>
@@ -1174,22 +1158,12 @@
             </div>
              <div class="cert-card">
                 <div class="cert-img-container">
-                    <img src="images/UI-UX-CERTIFICATE.jpg" alt="IoT Certification">
+                    <img src="images/UI-UX-CERTIFICATE.jpg" alt="UI/UX Certification" loading="lazy">
                 </div>
                 <div class="cert-details">
                     <h3>UI/UX</h3>
                     <p>Issued by: <span>Great Learning</span></p>
-                    <p>Principles of connected devices and architecture.</p>
-                </div>
-            </div>
-              <div class="cert-card">
-                <div class="cert-img-container">
-                    <img src="images/digital.jpeg" alt="IoT Certification">
-                </div>
-                <div class="cert-details">
-                    <h3>Data Scientist</h3>
-                    <p>Issued by: <span>Digital Edify</span></p>
-                    <p>Machinelearning,DeepLearning,Powerbi ,Dashboard preparations</p>
+                    <p>Principles of user interface and experience.</p>
                 </div>
             </div>
             
@@ -1265,7 +1239,7 @@
                     <span>Hyderabad, Telangana, India</span>
                 </div>
 
-                <div class="map-container">
+                <div class="map-container" id="map-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12182.30520634488!2d78.40804555!3d17.385044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1710600000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
@@ -1302,16 +1276,16 @@
     </footer>
 
     <script>
-        // --- PRELOADER LOGIC (REMOVES SCREEN AFTER 5 SECONDS) ---
-        window.addEventListener('load', () => {
+        // --- FIX 1: OPTIMIZED PRELOADER LOGIC ---
+        // Instead of waiting for every single megabyte of images to download, 
+        // this removes the preloader as soon as the HTML is drawn (max 1.5 seconds)
+        document.addEventListener('DOMContentLoaded', () => {
             const preloader = document.getElementById('preloader');
-            
-            // Set exactly to 5000 milliseconds (5 seconds)
             setTimeout(() => {
                 preloader.style.opacity = '0';
                 preloader.style.visibility = 'hidden';
-                document.body.classList.remove('no-scroll'); // Re-enable scrolling
-            }, 5000); 
+                document.body.classList.remove('no-scroll');
+            }, 1500); // Only a 1.5 second wait for the user now!
         });
 
         // --- MENU LOGIC ---
